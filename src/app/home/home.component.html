@@ -1,0 +1,39 @@
+<div class="sidenav" id="mySidenav">
+    <div id="imgst">
+        <img src="assets/a4.png"  width="70%" />
+    </div>
+    <a [routerLink]="[{ outlets: { sidebar: ['camp'] } }]" routerLinkActive="router-link-active"  id="about">Camp <i class="fa fa-building" ></i></a>
+    <a [routerLink]="[{ outlets: { sidebar: ['search'] } }]" routerLinkActive="router-link-active" id="blog">Search <i class="fa fa-search" ></i></a>
+    <a href="#" id="projects">Projects</a>
+    <a href="#" id="contact">Contact</a>
+</div>
+
+<div class="main">
+  <div class="row myHead">
+    <div class="col-sm-8">
+      <h1 class="header myWhite">Blood Donation</h1>
+    </div>
+    <div class="col-sm-4">
+        <div class="dropdown">
+            <button class="dropbtn">Welcome,User</button>
+            <div class="dropdown-content">
+                <div class="card">
+                        <p class="text-center">
+                            <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                        </p>
+                        <h3><strong>user</strong></h3>
+                        <p>user@email.com</p>
+                        <p class="text-left">
+                            <a href="#" class="btn btn-primary btn-block btn-sm">Edit Details</a>
+                        </p>
+                </div>
+            </div>            
+          </div>
+          <button [routerLink]="['/welcome']" routerLinkActive="router-link-active" class="dropbtn1">LogOut</button>
+
+    </div>
+  </div>
+
+  <router-outlet name="sidebar"></router-outlet>
+  
+</div>
