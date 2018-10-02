@@ -9,20 +9,37 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { BloodCampComponent } from './home/blood-camp/blood-camp.component';
-import { BloodSearchComponent } from './home/blood-search/blood-search.component'; // <-- NgModel lives here
+import { BloodSearchComponent } from './home/blood-search/blood-search.component';
+import { EditProfileComponent } from './home/edit-profile/edit-profile.component'; // <-- NgModel lives here
+import { UserNameService} from './user-name.service' ;
+import { TempDataService} from './temp-data.service' ;
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth.guard';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 const appRoutes: Routes = [
-  { path: 'signUp', component: SignUpComponent },
-  { path: 'login',      component: LoginComponent },
+  { path: 'signUp', component: SignUpComponent,
+ },
+  { path: 'login',      component: LoginComponent ,
+ },
   { path: 'home',      component: HomeComponent,
   children: [
-    { path: 'camp',      component: BloodCampComponent, outlet: 'sidebar' },
-    { path: 'search',      component: BloodSearchComponent, outlet: 'sidebar' },
+    { path: 'camp',      component: BloodCampComponent, outlet: 'sidebar',
+      },
+    { path: 'search',      component: BloodSearchComponent, outlet: 'sidebar',
+       },
+    { path: 'profile',      component: EditProfileComponent, outlet: 'sidebar',
+       },
 
-  ]},
+  ],
+  /*canActivate: [
+    AuthGuard
+  ]*/},
     {
     path: 'welcome',
-    component: WelcomeComponent
+    component: WelcomeComponent,
+
   },
   { path: '',
     redirectTo: '/welcome',
@@ -39,6 +56,7 @@ const appRoutes: Routes = [
     HomeComponent,
     BloodCampComponent,
     BloodSearchComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,9 +64,10 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    FormsModule
+    FormsModule ,
+    HttpClientModule ,
   ],
-  providers: [],
+  providers: [ UserNameService, AuthService , AuthGuard , TempDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

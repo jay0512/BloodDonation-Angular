@@ -31,6 +31,11 @@ li a:hover {
   input[type="date"]:valid:before {
     content: "BirthDate";
   }
-.mycontainer{
-    padding-top: 5%;
+
+.whiteboard{
+    padding:12% 4% 8% 6%;
+    background-color: rgb(252, 237, 236);
+}
+.bgred{
+    color: #b61f1f;
 }

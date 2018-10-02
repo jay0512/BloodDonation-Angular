@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TempDataService } from '../../temp-data.service';
 
 @Component({
   selector: 'app-blood-camp',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BloodCampComponent implements OnInit {
 
-  constructor() { }
+  public campList = [] ;
+
+  constructor( public dataService: TempDataService) { }
 
   ngOnInit() {
+    this.dataService.getCampList().subscribe(data => this.campList = data) ;
+
   }
 
 }

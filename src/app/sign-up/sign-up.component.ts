@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class SignUpComponent implements OnInit {
 
   bloodGroups = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+' , 'O-' ];
+  data = {};
   constructor() { }
 
   ngOnInit() {
   }
-
+  /*getData(let x ) {
+    this.data = x;
+  }*/
 }
