@@ -1,9 +1,8 @@
 <div>
-  <header class="w3-container w3-red w3-center" style="padding:16px">
-   <div class="container">
+  <div class="container-fluid w3-red w3-center">
     <div class="row">
-      <div class="col-8">
-        <img src="assets/a3.png" width="30%">
+      <div class="col-xs-12 col-sm-8" style="padding:25px">
+        <img src="assets/a3.png" width="35%">
   
         <h1>Values of donation</h1>
         <h5 class="w3-padding-32 just">Blood is sometimes collected using similar methods for therapeutic phlebotomy, similar to the ancient practice of bloodletting, which is used to treat conditions such as hereditary hemochromatosis or polycythemia vera. This blood is sometimes treated as a blood donation, but may be immediately discarded if it cannot be used for transfusion or further manufacturing.</h5>
@@ -11,8 +10,8 @@
         <p class="w3-padding-32 just">Today in the developed world, most blood donors are unpaid volunteers who donate blood for a community supply. In some countries, established supplies are limited and donors usually give blood when family or friends need a transfusion (directed donation). Many donors donate as an act of charity, but in countries that allow paid donation some donors are paid, and in some cases there are incentives other than money such as paid time off from work. Donors can also have blood drawn for their own future use (autologous donation). Donating is relatively safe, but some donors have bruising where the needle is inserted or may feel faint. </p>
   
       </div>
-      <div class="col-4 mycontainer">
-          <h2>Login<br> <small>It's free and always will be.</small></h2>
+      <div class="col-xs-12 col-sm-4 whiteboard">
+          <h2 class="bgred">Login<br> <small class="bgred">It's free and always will be.</small></h2>
         <div class="row justify-content-center">
             <form role="form" #userForm="ngForm" novalidate>
                 
@@ -24,21 +23,17 @@
             </div>
             <div class="col-xs-12 col-sm-12 ">
                 <div class="form-group">
-                    <input #psw="ngModel" [class.is-invalid]="psw.invalid && psw.touched" type="text" name="psw" class="form-control input-lg" placeholder="Password" ngModel>
+                    <input #psw="ngModel" [class.is-invalid]="psw.invalid && psw.touched" type="password" name="psw" class="form-control input-lg" placeholder="Password" ngModel>
                     <small class="text-danger" [class.d-none]="psw.valid || psw.untouched">Password is required</small>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 float-right"><button type="submit"  [routerLink]="['/welcome']" routerLinkActive="router-link-active" class="btn btn-success btn-block btn-lg">Cancel</button></div>
-            <div class="col-xs-12 col-sm-6"><button type="submit"  [routerLink]="['/home']" routerLinkActive="router-link-active"  class="btn btn-primary btn-block btn-lg" >Login</button></div>
+            <small class="text-danger" [class.d-none]="chkLogin">Username or Password incorrect</small>
+            <div class="col-xs-12 col-sm-6"><button type="submit" (click)="loginCheck(unm.value,psw.value)"  class="btn btn-primary btn-block btn-lg" >Login</button></div>
+            <div class="col-xs-12 col-sm-6"><button type="submit"  [routerLink]="['/welcome']" routerLinkActive="router-link-active" class="btn btn-success btn-block btn-lg">Cancel</button></div>
             </form>
         </div>
-  
-  
-      </div>
     </div>
-  
-  
-  </div>
-  </header>
+</div>
+</div>
   </div>
   

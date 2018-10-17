@@ -1,4 +1,9 @@
-<div class="sidenav" id="mySidenav">
+<div *ngIf="IsLogin!='true'">
+    You are not logged 
+    <a [routerLink]="['/login']" routerLinkActive="router-link-active">click here</a> for log in.
+</div>
+<div *ngIf="IsLogin=='true'">
+    <div class="sidenav" id="mySidenav">
     <div id="imgst">
         <img src="assets/a4.png"  width="70%" />
     </div>
@@ -15,25 +20,29 @@
     </div>
     <div class="col-sm-4">
         <div class="dropdown">
-            <button class="dropbtn">Welcome,User</button>
+            <button class="dropbtn">Welcome {{ unm }}</button>
             <div class="dropdown-content">
-                <div class="card">
+                <div class="card mycenter">
                         <p class="text-center">
-                            <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                            <a [routerLink]="[{ outlets: { sidebar: ['profile'] } }]" routerLinkActive="router-link-active">
+                                <img class="myimg" src="assets/a2.png" alt="Go to EditUser!" width="100" height="100">
+                            </a>
+                            <!--<i class="fa fa-user fa-3x" aria-hidden="true"></i>-->
                         </p>
                         <h3><strong>user</strong></h3>
                         <p>user@email.com</p>
                         <p class="text-left">
-                            <a href="#" class="btn btn-primary btn-block btn-sm">Edit Details</a>
+                            <a [routerLink]="[{ outlets: { sidebar: ['profile'] } }]" routerLinkActive="router-link-active" class="btn btn-primary btn-block btn-sm">Edit Details</a>
                         </p>
                 </div>
             </div>            
           </div>
-          <button [routerLink]="['/welcome']" routerLinkActive="router-link-active" class="dropbtn1">LogOut</button>
+          <button [routerLink]="['/welcome']" routerLinkActive="router-link-active" class="dropbtn1" (click)="Logout()">LogOut</button>
 
     </div>
   </div>
 
   <router-outlet name="sidebar"></router-outlet>
   
+</div>
 </div>

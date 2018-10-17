@@ -30,7 +30,7 @@ body {
   position: relative;
   height: 480px;
   width: 900px;
-  margin: 5% auto;
+  margin: 4% auto;
   background-color: #FFF;
  
 }
@@ -145,3 +145,17 @@ li {
   -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.5);
 }
+
+.mytitle{
+  padding: 20px 20px 0px 20px;
+  font-size: 30px;
+  color: #a01d14;
+  font-family: 'bavro-SIMPLIFICA_Typeface';
+
+}
+@font-face {
+    font-family: 'SIMPLIFICA_Typeface';
+    src:  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+     url('/assets/webfont/SIMPLIFICA Typeface.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+  

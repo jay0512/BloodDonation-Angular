@@ -32,5 +32,9 @@ li a:hover {
     content: "BirthDate";
   }
   .whiteboard{
-      background-color: #aaa;
+      padding: 20px;
+      background-color: rgb(252, 237, 236);
+  }
+  .bgred{
+      color: #b61f1f;
   }

@@ -121,6 +121,13 @@ body {
 
 .dropbtn1:hover {background-color: #a20f0f;}
 
+.mycenter{
+    align-items: center;
+}
+.myimg {
+    border-radius: 50%;
+    border: 5px solid #a20f0f;
+}
 @font-face {
     font-family: "bavro-regular-webfont";
     src:
