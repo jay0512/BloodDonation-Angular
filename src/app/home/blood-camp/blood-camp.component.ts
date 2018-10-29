@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TempDataService } from '../../temp-data.service';
+import { TempDataService } from '../../services/temp-data.service';
 
 @Component({
   selector: 'app-blood-camp',

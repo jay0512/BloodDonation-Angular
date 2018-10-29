@@ -2,6 +2,8 @@
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+
+
 export const environment = {
   production: false,
   auth: {
@@ -12,6 +14,8 @@ export const environment = {
     scope: 'openid profile email'
   }
 };
+
+
 
 /*
  * In development mode, for easier debugging, you can ignore zone related error

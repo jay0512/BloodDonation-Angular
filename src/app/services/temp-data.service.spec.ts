@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { TempDataService } from './services/temp-data.service';
+import { TempDataService } from './temp-data.service';
 
 describe('TempDataService', () => {
   beforeEach(() => {

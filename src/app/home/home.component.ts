@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import { UserNameService } from '../user-name.service';
-import { AuthService } from '../auth/auth.service';
+import { UserNameService } from '../services/user-name.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +13,7 @@ export class HomeComponent implements OnInit {
   IsLogin: string;
   public unm: string = sessionStorage.getItem('user');
 
-  constructor(private data: UserNameService , public authService: AuthService) {
+  constructor(private data: UserNameService) {
     this.IsLogin = sessionStorage.getItem('IsLogin');
    }
 

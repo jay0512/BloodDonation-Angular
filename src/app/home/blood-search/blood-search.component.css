@@ -12,6 +12,13 @@
     border-radius: 25px;
     border: 7px solid #E0655C;
 }
+.custom-select{
+    font-size:16px;
+}
+.btn-primary{
+    background-color:#a12819;
+    border-color:#a12819;
+}
 .mytable { 
         background: #f1f8ee; font: .9em/1.2em Georgia, "Times New Roman", Times, serif; color: #033; }
 .mytable caption { font-size: 1.3em; font-weight: bold; text-align: left; padding: 1em 4px; }

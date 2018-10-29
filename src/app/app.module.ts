@@ -11,10 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { BloodCampComponent } from './home/blood-camp/blood-camp.component';
 import { BloodSearchComponent } from './home/blood-search/blood-search.component';
 import { EditProfileComponent } from './home/edit-profile/edit-profile.component'; // <-- NgModel lives here
-import { UserNameService} from './user-name.service' ;
-import { TempDataService} from './temp-data.service' ;
-import { AuthService } from './auth/auth.service';
-import { AuthGuard } from './auth/auth.guard';
+import { UserNameService} from './services/user-name.service' ;
+import { TempDataService} from './services/temp-data.service' ;
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
@@ -67,7 +65,7 @@ const appRoutes: Routes = [
     FormsModule ,
     HttpClientModule ,
   ],
-  providers: [ UserNameService, AuthService , AuthGuard , TempDataService],
+  providers: [ UserNameService, TempDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
